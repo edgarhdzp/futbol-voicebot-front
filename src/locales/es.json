@@ -1,0 +1,9 @@
+{
+  "welcome": "Bienvenido al Voicebot del Club America",
+  "start": "Comenzar",
+  "description": "Este Voicebot puede hablar contigo sobre el club, jugadores, historia.Puedes guardar tus jugadores favoritos y asi mismo consultarlos.",
+  "project": "Proyecto realizado como prueba técnica integrando buenas prácticas por",
+  "author": "Daniel Hernández",
+  "github": "Perfil Github",
+  "title": "🎙️ Voicebot del Club America"
+}
