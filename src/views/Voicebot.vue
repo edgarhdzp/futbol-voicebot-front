@@ -56,15 +56,15 @@ async function startRecording(): Promise<void> {
     audioChunks = [];
     mediaRecorder.ondataavailable = (event: BlobEvent) => audioChunks.push(event.data);
     mediaRecorder.onstop = async () => {
-      const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+      const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
       audioUrl.value = URL.createObjectURL(audioBlob);
 
       const formData = new FormData();
-      formData.append("audio", audioBlob, "recording.webm");
+      formData.append("audio", audioBlob, "recording.wav");
       formData.append("sessionId", sessionId.toString());
 
       try {
-        const res = await fetch("http://localhost:3002/api/voice/process", {
+        const res = await fetch("http://143.110.134.135:3005/api/voice/process", {
           method: "POST",
           body: formData,
         });
